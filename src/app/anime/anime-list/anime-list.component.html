@@ -1,18 +1,19 @@
   <br>
   <div class="container contenedor-animes">
   <div class="row">
-    <p>La cantidad total de episodios es 2326 y el rating promedio es 8.03</p>
+    <h1>ANIME</h1> 
     <div *ngIf="selected">
       <app-anime-detail [animeDetail]="selectedBAnime"></app-anime-detail>
       <hr>
     </div>
-    <div class="col-4" *ngFor="let anime of animes">
-        <p>{{anime.name}}</p>
-        <img src={{anime.img}}  alt="anime image" width=50px>
+    <div></div>
+
+    <div class="card" style="width: 18rem;"  *ngFor="let anime of animes">
+      <p class="fw-bold">{{anime.name}}.</p>
+        <img src={{anime.img}}  alt="anime image" width=200px>
         <p>⭐{{anime.Rating}} <b>Categories: </b>{{anime.categorie}}</p>
-        <a href="#" (click)="onSelected(anime)">More information</a>
+        <button type="button" class="btn btn-primary" href="#" (click)="onSelected(anime)">More information</button>
         <hr>
    </div>
-
   </div>
 </div>
